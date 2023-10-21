@@ -1,3 +1,12 @@
 # Vamos exercitar a construção de projetos Python em containers Docker. 
 # Faça o fork do projeto conversão de distância (https://github.com/KubeDev/conversao-distancia), 
 # crie o Dockerfile e o docker compose para subir a aplicação em containers.
+
+version: '3.1'
+
+services:
+  conversao-temperatura:
+    image: brvendrametto/conversao-distancia:latest
+    ports:
+      - 8080:5000
+    
